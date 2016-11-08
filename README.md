@@ -24,7 +24,7 @@ or `Message.Obtain()`.
 
   
 ======
-HTLint对Android Lint规则进行了扩展，在不影响Android Lint原有的检查项目的基础上，额外检查以下内容：   
+CustomLintDemo对Android Lint规则进行了扩展，在不影响Android Lint原有的检查项目的基础上，额外检查以下内容：
 【1】不能直接使用log,toast，handler  
 【2】activity或fragment对应的layout资源，用前缀标示，例如：activity_mediapicker.xml  
 【3】viewholder关联的资源以item结尾  

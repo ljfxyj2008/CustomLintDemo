@@ -73,7 +73,7 @@ public class ActivityFragmentLayoutNameDetector extends Detector
                 Expression argument = arguments.next();
 
                 if (argument == null) {
-                    System.out.println("HTLint Error:Some thing went wrong in ActivityFragmentLayoutNameDetector.visitMethod:\n\targument of setContentView is null");
+                    System.out.println("Custom Lint Error:Some thing went wrong in ActivityFragmentLayoutNameDetector.visitMethod:\n\targument of setContentView is null");
                     return;
                 }
 
