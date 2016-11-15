@@ -1,1 +1,1 @@
-include ':app', ':CustomLintJar', ':CustomLintAAR'
+include ':Demo', ':CustomLintJar', ':CustomLintAAR'

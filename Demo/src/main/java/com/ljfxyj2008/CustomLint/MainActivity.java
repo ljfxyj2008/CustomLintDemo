@@ -48,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    private void printName(String name){
+        Toast.makeText(this, name, Toast.LENGTH_SHORT).show();
+    }
+
     public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
         private LayoutInflater mInflater;
         private Context mCotext;
@@ -90,6 +94,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity1_main);
         doInit();
+
+        String name1 = "Lucy";
+        String name2 = "Jack";
+        printName("Lucy");
+        printName("Lucy" + "Jack");
+        printName(name1);
+        printName(name1 + name2);
+
 
         rv = (RecyclerView)findViewById(R.id.recycler_view);
         rv.setLayoutManager(new LinearLayoutManager(this));

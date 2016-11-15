@@ -13,6 +13,7 @@ import com.ljfxyj2008.CustomLint.lintrules.detectors.ForIfTryDepthDetector;
 import com.ljfxyj2008.CustomLint.lintrules.detectors.HandlerUsageDetector;
 import com.ljfxyj2008.CustomLint.lintrules.detectors.LogUsageDetector;
 import com.ljfxyj2008.CustomLint.lintrules.detectors.MessageObtainDetector;
+import com.ljfxyj2008.CustomLint.lintrules.detectors.NotOperatorArgumentDetector;
 import com.ljfxyj2008.CustomLint.lintrules.detectors.ThrowExceptionDetector;
 import com.ljfxyj2008.CustomLint.lintrules.detectors.ToastUsageDetector;
 import com.ljfxyj2008.CustomLint.lintrules.detectors.ViewHolderItemNameDetector;
@@ -49,6 +50,7 @@ public class MyIssueRegistry extends IssueRegistry {
                 ForIfTryDepthDetector.ForDepthISSUE,
                 ConstantNameDetector.ISSUE,
                 BuildGradleVersionDetector.ISSUE,
-                ViewHolderItemNameDetector.ISSUE);
+                ViewHolderItemNameDetector.ISSUE,
+                NotOperatorArgumentDetector.ISSUE);
     }
 }

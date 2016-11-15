@@ -21,6 +21,7 @@ This demo program does Lint checking for the following issues:
 [8]You should not call `new Message()` directly. Instead, you should use `handler.obtainMessage` 
 or `Message.Obtain()`.  
 [9]You should throw your own exception with the one caught in try-catch block.   
+[10]You should pass in a value or variable as a parameter, rather than passing in the operand and operator as parameters. For example, `printName("Lucy")` and `printName(mName)` is legal, while `printName(mName1 + mName2)` is NOT.
 
   
 ======
@@ -32,8 +33,9 @@ CustomLintDemo对Android Lint规则进行了扩展，在不影响Android Lint原
 【5】build.gradle里面那个版本依赖，必须通过 gradle.properties文件中指定  
 【6】嵌套For/If/Try最大深度3  
 【7】常量的名称   
-【8】Message必须采用Message.Obtain获取 
+【8】Message必须采用Message.Obtain获取   
 【9】throw异常的时候注意把已经捕获的异常也一并带上，例如：throw new ManagerException("数据库异常");应该改成throw new ManagerException("数据库异常",e)    
+【10】调用特定函数时应该直接传入值或单独的变量作为参数，而不是传入多个操作数和操作符作为变量。比如，printName("Lucy")和printName(mName)是合法的，而printName(mName1 + mName2)是不合法的。
 
 ======
 自定义Lint规则的2种检查方法：  
